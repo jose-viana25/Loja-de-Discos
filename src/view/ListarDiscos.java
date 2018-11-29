@@ -12,6 +12,9 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+
+import controller.DiscosController;
+
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
@@ -28,6 +31,8 @@ public class ListarDiscos {
 	private JButton btnEditar;
 	private JButton btnDeletar;
 
+	
+	private DiscosController discosController;
 	/**
 	 * Launch the application.
 	 */
@@ -102,6 +107,13 @@ public class ListarDiscos {
 		txtfPesquisar.setColumns(10);
 		
 		btnLupinha = new JButton("\"Lupinha\"");
+		btnLupinha.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				discosController.listar(txtfPesquisar.getText());
+				
+			}
+		});
 		panel_1.add(btnLupinha);
 		
 		table = new JTable();

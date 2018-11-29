@@ -36,6 +36,9 @@ class TelaDeCadastroDeDisco implements ActionListener{
 	private JButton btnGravar = new JButton("Gravar");
 	private JButton btnCancelar = new JButton("Cancelar");
 	
+	DiscosController discosController = new DiscosController();
+	Discos discos = new Discos();
+	
 	public TelaDeCadastroDeDisco() {
 		
 		JPanel panPrincipal = new JPanel(new GridLayout(1, 2));
@@ -85,8 +88,6 @@ class TelaDeCadastroDeDisco implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand()=="Gravar") {
-			DiscosController dc = new DiscosController();
-			Discos discos = new Discos();
 			
 			discos.setTitulo(txtTitulo.getText());
 			discos.setArtista(txtArtista.getText());
@@ -94,8 +95,7 @@ class TelaDeCadastroDeDisco implements ActionListener{
 			discos.setFormato(cmbFormato.getSelectedItem().toString());
 			discos.setTipo(cmbTipo.getSelectedItem().toString());
 			discos.setValor(Double.parseDouble(txtValor.getText()));
-			System.out.println(discos.toString());
-			dc.gravar(discos);
+			discosController.gravar(discos);
 		} else {
 			
 			Menu.main(null);

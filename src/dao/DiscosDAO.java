@@ -6,9 +6,9 @@ import entity.Discos;
 
 public interface DiscosDAO {
 
-public void gravar();
+	public void gravar(Discos disco);
 	public Discos alterar();
 	public void deletar();
-	public List<Discos> pesquisar();
+	public List<Discos> pesquisar(String pesquisa);
 	
 }

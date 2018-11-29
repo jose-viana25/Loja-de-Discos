@@ -6,10 +6,10 @@ import java.sql.SQLException;
 public class ConnectionFactory {
 	
 	public Connection createConnection() throws SQLException, ClassNotFoundException {
-			String url = "jdbc:mysql://localhost:3306/loja";
+			String url = "jdbc:mariadb://localhost:3306/lojaDeDiscos";
 			String user = "root";
-			String pass = "264509";
-			Class.forName("com.mysql.jdbc.MySQLConnection");
+			String pass = "";
+			Class.forName("org.mariadb.jdbc.MariaDbConnection");
 			Connection conexao = null;
 			conexao =  DriverManager.getConnection(url, user, pass);
 

@@ -4,7 +4,7 @@ import java.util.List;
 
 import entity.Discos;
 
-public class FuncionarioDAOImpl implements DiscosDAO {
+public class FuncionarioDAOImpl implements FuncionarioDAO {
 	
 	public void gravar(){}
 	

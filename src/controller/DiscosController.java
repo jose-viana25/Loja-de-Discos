@@ -3,11 +3,23 @@ package controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import dao.DiscosDAO;
+import dao.DiscosDAOImpl;
 import entity.Discos;
 
 public class DiscosController {
 
-	public void gravar(Discos disco){}
+	private DiscosDAO discosDAOImpl;
+	
+	public DiscosController() {
+		discosDAOImpl = new DiscosDAOImpl();
+	}
+	
+	public void gravar(Discos disco){
+		
+		discosDAOImpl.gravar(disco);
+		
+	}
 	
 	public Discos alterar(){
 		return null;
@@ -15,9 +27,11 @@ public class DiscosController {
 	}
 	public void deletar() {}
 	
-	public List<Discos> listar(){
-		List<Discos> discos = new ArrayList<>();
-		return discos;
+	public List<Discos> listar(String pesquisa){
+		
+		discosDAOImpl.pesquisar(pesquisa);
+		
+		return null;
 	}
 	
 	

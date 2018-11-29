@@ -4,7 +4,7 @@ import java.util.List;
 
 import entity.Discos;
 
-public class UsuarioDAOImpl implements DiscosDAO {
+public class UsuarioDAOImpl implements UsuarioDAO {
 	
 	public void gravar(){}
 	
