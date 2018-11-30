@@ -1,4 +1,8 @@
 package controller;
+<<<<<<< HEAD
+=======
+
+>>>>>>> d05489b3822f7213d441f94ef8bcda8ddc062266
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +16,11 @@ import entity.Venda;
 public class VendaController {
 	public void gravar(Venda venda){
 		VendaDAOImpl vendaDAO = new VendaDAOImpl(); 
+<<<<<<< HEAD
 		vendaDAO.gravar(null);
+=======
+		vendaDAO.gravar();
+>>>>>>> d05489b3822f7213d441f94ef8bcda8ddc062266
 	
 	
 	

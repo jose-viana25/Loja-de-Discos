@@ -12,6 +12,10 @@ import java.awt.FlowLayout;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JLabel;
+<<<<<<< HEAD
+=======
+import com.jgoodies.forms.factories.DefaultComponentFactory;
+>>>>>>> d05489b3822f7213d441f94ef8bcda8ddc062266
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -92,7 +96,11 @@ public class ListarFuncionarios {
 		panel_1 = new JPanel();
 		frmLojaDeDiscos.getContentPane().add(panel_1, BorderLayout.NORTH);
 		
+<<<<<<< HEAD
 		lblPesquisar = new JLabel("Pesquisar:");
+=======
+		lblPesquisar = DefaultComponentFactory.getInstance().createLabel("Pesquisar:");
+>>>>>>> d05489b3822f7213d441f94ef8bcda8ddc062266
 		panel_1.add(lblPesquisar);
 		
 		txtfPesquisar = new JTextField();

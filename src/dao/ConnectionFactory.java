@@ -17,10 +17,17 @@ public class ConnectionFactory {
 				connection = DriverManager.getConnection(URL, USER, PASS);
 			}
 		} catch (SQLException e) {
+<<<<<<< HEAD
 			System.err.println("Erro ao realizar conexï¿½o com o banco de dados!");
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			System.err.println("O driver especificado nï¿½o foi encontrado!");
+=======
+			System.err.println("Erro ao realizar conexão com o banco de dados!");
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			System.err.println("O driver especificado não foi encontrado!");
+>>>>>>> d05489b3822f7213d441f94ef8bcda8ddc062266
 			e.printStackTrace();
 		}
 
