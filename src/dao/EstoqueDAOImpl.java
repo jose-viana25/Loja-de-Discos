@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import entity.Discos;
+import entity.Estoque;
 
 public class EstoqueDAOImpl implements EstoqueDAO {
 	
@@ -12,18 +13,31 @@ public class EstoqueDAOImpl implements EstoqueDAO {
 	public EstoqueDAOImpl() {
 		this.connection =  ConnectionFactory.getConnection();
 	}
-	
-	public void gravar(){}
-	
-	public Discos alterar(){
-		return null;
+
+	@Override
+	public void gravar(Estoque e) {
+		// TODO Auto-generated method stub
 		
 	}
-	public void deletar() {}
-	
-	public List<Discos> pesquisar(){
+
+	@Override
+	public Discos alterar(Estoque e) {
+		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public void deletar(Estoque e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Discos> pesquisar(Estoque e) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 	
 	
 }

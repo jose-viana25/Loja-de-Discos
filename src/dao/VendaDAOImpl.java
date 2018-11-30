@@ -6,33 +6,38 @@ import java.util.List;
 import entity.Discos;
 import entity.Venda;
 
-public class VendaDAOImpl  {
+public class VendaDAOImpl implements VendaDAO  {
 	private Connection connection;
 	
 	public VendaDAOImpl() {
 		this.connection =  ConnectionFactory.getConnection();
 	}
-	
-	
-	public void gravar(Venda venda){
-		
-		
-		
-	}
-	
-	public Venda alterar(Venda v){
-		
-		return v;
-	}
-	public void deletar(Venda v) {
-		
-		
+
+	@Override
+	public void gravar(Venda v) {
+		// TODO Auto-generated method stub
 		
 	}
-	
-	public List<Discos> pesquisar(Venda v){
+
+	@Override
+	public Discos alterar(Venda v) {
+		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public void deletar(Venda v) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Discos> pesquisar(Venda v) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
 
 	
 	

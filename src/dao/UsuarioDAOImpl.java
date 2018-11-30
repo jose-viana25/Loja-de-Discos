@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 
 import entity.Discos;
+import entity.Usuario;
 
 public class UsuarioDAOImpl implements UsuarioDAO {
 	
@@ -11,19 +12,30 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 
 	public UsuarioDAOImpl() {
 		this.connection =  ConnectionFactory.getConnection();
-	}
 	
-	public void gravar(){}
-	
-	public Discos alterar(){
-		return null;
+}
+
+	@Override
+	public void gravar(Usuario u) {
+		// TODO Auto-generated method stub
 		
 	}
-	public void deletar() {}
-	
-	public List<Discos> pesquisar(){
+
+	@Override
+	public Discos alterar(Usuario u) {
+		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	
+
+	@Override
+	public void deletar(Usuario u) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Discos> pesquisar(String pesquisa) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
