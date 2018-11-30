@@ -8,6 +8,7 @@ import java.util.List;
 import entity.Discos;
 
 public class DiscosDAOImpl implements DiscosDAO {
+	//TODO
 	public void gravar(Discos disco){
 		String comando = "INSERT INTO DISCOS (id, nome) VALUES("+disco.getId()+","+disco.getTitulo()+")";
 		try {
@@ -19,7 +20,19 @@ public class DiscosDAOImpl implements DiscosDAO {
 		}
 		
 	}
+	//TODO - Terminar 
 	public Discos alterar(Discos d){
+		String comando = "UPDATE DISCOS SET id="+d.getId()+", nome="+d.getTitulo();
+		
+		try {
+			Connection conexao = ConnectionFactory.getConnection();
+			PreparedStatement preparedStatemaent = conexao.prepareStatement(comando);
+			int resultado = preparedStatemaent.executeUpdate();
+			System.out.println(resultado);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
 		
 		return d;
 		

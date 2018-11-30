@@ -6,9 +6,9 @@ import entity.Endereco;
 
 public interface EnderecoDAO {
 
-public void gravar();
-	public Endereco alterar();
-	public void deletar();
-	public List<Endereco> pesquisar();
+public void gravar(Endereco e );
+	public Endereco alterar(Endereco e);
+	public void deletar(Endereco e);
+	public List<Endereco> pesquisar(String pesquisa);
 	
 }
