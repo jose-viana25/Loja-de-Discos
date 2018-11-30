@@ -7,7 +7,9 @@ import entity.Endereco;
 
 public class EnderecoController {
 
-	public void gravar(Endereco endereco){}
+	public void gravar(Endereco endereco){
+		
+	}
 	
 	public Endereco alterar(){
 		return null;
