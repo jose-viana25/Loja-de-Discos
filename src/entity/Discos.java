@@ -2,11 +2,14 @@ package entity;
 import java.util.Date;
 
 public class Discos {
-
 	private int id;
-
 	private String titulo;
-
+	private String artista;
+	private double valor;
+	private String tipo;
+	private Date dtLanc;
+	private String formato;
+	
 	public int getId() {
 		return id;
 	}
@@ -63,15 +66,7 @@ public class Discos {
 		this.formato = formato;
 	}
 
-	private String artista;
 
-	private double valor;
-
-	private String tipo;
-
-	private Date dtLanc;
-
-	private String formato;
 
 	@Override
 	public String toString() {

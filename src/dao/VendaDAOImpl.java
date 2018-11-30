@@ -1,22 +1,40 @@
 package dao;
 
+import java.sql.Connection;
 import java.util.List;
 
 import entity.Discos;
+import entity.Venda;
 
-public class VendaDAOImpl implements VendaDAO {
+public class VendaDAOImpl  {
+	private Connection connection;
 	
-	public void gravar(){}
+	public VendaDAOImpl() {
+		this.connection =  ConnectionFactory.getConnection();
+	}
 	
-	public Discos alterar(){
-		return null;
+	
+	public void gravar(Venda venda){
+		
+		
 		
 	}
-	public void deletar() {}
 	
-	public List<Discos> pesquisar(){
+	public Venda alterar(Venda v){
+		
+		return v;
+	}
+	public void deletar(Venda v) {
+		
+		
+		
+	}
+	
+	public List<Discos> pesquisar(Venda v){
 		return null;
 	}
+
+	
 	
 	
 }

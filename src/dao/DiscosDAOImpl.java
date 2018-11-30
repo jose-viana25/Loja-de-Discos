@@ -10,15 +10,11 @@ import entity.Discos;
 public class DiscosDAOImpl implements DiscosDAO {
 	
 	public void gravar(Discos disco){
-		
-		ConnectionFactory connectionFactory = new ConnectionFactory();
 		String comando = "INSERT INTO DISCOS (id, nome) VALUES("+disco.getId()+","+disco.getTitulo()+")";
 		try {
-			Connection conexao = connectionFactory.createConnection();
+			Connection conexao = ConnectionFactory.getConnection();
 			PreparedStatement preparedStatemaent = conexao.prepareStatement(comando);
 			int resultado = preparedStatemaent.executeUpdate();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -33,16 +29,13 @@ public class DiscosDAOImpl implements DiscosDAO {
 	
 	public List<Discos> pesquisar(String pesquisa){
 		
-		ConnectionFactory connectionFactory = new ConnectionFactory();
-		String comando = "SELECT * FROM DISCOS";
+		String comando = "SELECT * FROM DISCOS WHERE NOME LIKE %"+pesquisa;
 		
 		try {
-			Connection conexao = connectionFactory.createConnection();
+			Connection conexao = ConnectionFactory.getConnection();
 			PreparedStatement preparedStatemaent = conexao.prepareStatement(comando);
 			int resultado = preparedStatemaent.executeUpdate();
 			System.out.println(resultado);
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

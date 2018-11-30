@@ -3,11 +3,21 @@ package controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import dao.EstoqueDAOImpl;
+import dao.VendaDAO;
+import dao.VendaDAOImpl;
+import entity.Discos;
+import entity.Estoque;
 import entity.Venda;
 
 public class VendaController {
-
-	public void gravar(Venda venda){}
+	public void gravar(Venda venda){
+		VendaDAOImpl vendaDAO = new VendaDAOImpl(); 
+		vendaDAO.gravar();
+	
+	
+	
+	}
 	
 	public Venda alterar(){
 		return null;

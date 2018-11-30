@@ -1,6 +1,11 @@
 package entity;
 public class DiscoVenda {
 
+	private int quantidade;
+
+	private double precoTotal;
+	
+	
 	public int getQuantidade() {
 		return quantidade;
 	}
@@ -9,16 +14,14 @@ public class DiscoVenda {
 		this.quantidade = quantidade;
 	}
 
-	public int getPreçoTotal() {
-		return preçoTotal;
+	public double getPrecoTotal() {
+		return precoTotal;
 	}
 
-	public void setPreçoTotal(int preçoTotal) {
-		this.preçoTotal = preçoTotal;
+	public void setPrecoTotal(double precoTotal) {
+		this.precoTotal = precoTotal;
 	}
 
-	private int quantidade;
-
-	private int preçoTotal;
+	
 
 }
